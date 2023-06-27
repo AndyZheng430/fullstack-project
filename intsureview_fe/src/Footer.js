@@ -6,7 +6,7 @@ function Footer() {
         <footer>
             <div className="row">
                 <div className="column">
-                    <h2>Fake Company Name</h2>
+                    <h2>Dinosaurs & Donuts</h2>
                     <a href="#">About Us</a>
                     <a href="#">Careers</a>
                     <a href="#">Contact Us</a>
@@ -28,7 +28,7 @@ function Footer() {
                 </div>
             </div>
             <div className="copyright row">
-                Not a Real Copyright ©2023 Fake Company Name.
+                Not a Real Copyright ©2023 Dinosaurs & Donuts, Inc.
             </div>
         </footer>
     );

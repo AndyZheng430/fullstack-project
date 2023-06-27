@@ -3,7 +3,7 @@ import './Header.css'
 function Header() {
     return (
         <header>
-            <h1>Fake Company Name</h1>
+            <h1>Dinosaurs & Donuts</h1>
         </header>
     );
 }

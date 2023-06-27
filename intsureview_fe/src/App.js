@@ -1,13 +1,14 @@
 import Header from './Header.js';
+import Content from './Content.js';
 import Footer from "./Footer.js";
 
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className = "App">
+    <div className="app">
       <Header /> 
+      <Content />
       <Footer />
     </div>
   );
