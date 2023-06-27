@@ -1,0 +1,9 @@
+form {
+    padding: 0px 40px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}

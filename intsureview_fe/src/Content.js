@@ -1,9 +1,8 @@
-import Form from './Form.js'
+import Form from "./Form.js";
 
 function Content() {
-
     return (
-        <div className="content">
+        <div>
             <Form />
         </div>
     );
