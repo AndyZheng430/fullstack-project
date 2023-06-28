@@ -43,12 +43,12 @@ def RidePostView(request):
         details = RideForm(form_data)
 
         if details.is_valid():
-            return HttpResponse("Data is valid")
+            return HttpResponse("Order has been complete!")
         else:
-            response = HttpResponse("Form is invalid")
+            response = HttpResponse("Form is invalid. Please Try again")
             response.status_code = 400
             return response
     else:
-        response = HttpResponse("Method Not Allowed")
+        response = HttpResponse("Method Not Allowed.")
         response.status_code = 405
         return response
