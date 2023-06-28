@@ -25,6 +25,18 @@
     margin-bottom: 10px;
 }
 
+.error {
+    color: #D8000C;
+    background-color: #FFBABA;
+    font-weight: 300;
+}
+
+.success {
+    color: #270;
+    background-color: #DFF2BF;
+    font-weight: 300;
+}
+
 .input {
     width: 100%;
 }
