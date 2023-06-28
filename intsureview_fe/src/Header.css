@@ -1,4 +1,16 @@
-header {
-    display: block;
+.header {
+    background-color: black;
+    color: white;
+    display: inline-block;
     padding: 20px 40px;
+    width: 100%;
+}
+
+.logo {
+    float: left;
+    height: 10vmin;
+}
+
+.header-title {
+    margin: 15px;
 }

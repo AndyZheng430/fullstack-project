@@ -13,7 +13,7 @@ function Footer() {
                 </div>
                 <div className="column">
                     <div className="column">
-                        <h3>Product</h3>
+                        <h3>Products</h3>
                         <a href="#">Ride</a>
                         <a href="#">Menu</a>
                         <a href="#">Takeout</a>
