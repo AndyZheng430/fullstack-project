@@ -31,9 +31,12 @@ class GroupViewSet(viewsets.ModelViewSet):
 
 
 def RidePostView(request):
+    """
+    API endpoint for Create Your Ride Form to send a POST request
+    """
+
     if request.method == "POST":
         request_body_json = json.loads(request.body.decode())
-        print(request_body_json)
 
         form_data = QueryDict("", mutable=True)
 
@@ -45,7 +48,12 @@ def RidePostView(request):
         if details.is_valid():
             return HttpResponse("Order has been complete!")
         else:
-            response = HttpResponse("Form is invalid. Please Try again")
+            # returns list of error in http response message
+            message = "Form is invalid for the following reasons: \n"
+            for key in details.errors:
+                for error in details.errors.get(key):
+                    message += error + "\n"
+            response = HttpResponse(message)
             response.status_code = 400
             return response
     else:

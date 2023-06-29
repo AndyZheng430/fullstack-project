@@ -17,6 +17,8 @@ function Form() {
 
         var hasError = false;
 
+        // Form validation for name and ride_type
+
         if (formJson["name"].length < 1) {
             setNameErrorMessage("Please complete this required field.");
             hasError = true;
