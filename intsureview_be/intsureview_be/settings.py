@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-m&==65=%26asu-ggwr8t&l1m3p4#ayz=stckq+g#s7ip4@t-j3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -39,16 +39,18 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "intsureview_be.apps.api",
+    "corsheaders",
 ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
-    "django.middleware.csrf.CsrfViewMiddleware",
+    # "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
 ]
 
 ROOT_URLCONF = "intsureview_be.urls"
@@ -74,6 +76,7 @@ WSGI_APPLICATION = "intsureview_be.wsgi.application"
 REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
     "PAGE_SIZE": 10,
+    "DEFAULT_PERMISSION_CLASSES": ["rest_framework.permissions.AllowAny"],
 }
 
 # Database
@@ -127,3 +130,11 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Cors settings
+CORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ALLOW_CREDENTIALS = True
+
+# Csrf settings
+CSRF_TRUSTED_ORIGINS = ["http://localhost:3000"]
